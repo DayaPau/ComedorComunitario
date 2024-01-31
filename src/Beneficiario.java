@@ -1,42 +1,26 @@
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 public class Beneficiario {
     private String nombre;
     private String apellido;
-    private String genero;
     private String cedula;
-    private Fecha fechaRegistro;
-    private ElecciondeMenu menuSeleccionado;
+    private String genero;
+    private Date fechaRegistro;
 
-    public Beneficiario(String nombre, String apellido, String genero, String cedula, Fecha fechaRegistro) {
+    // private EleccionMenu eleccion;
+
+
+    public Beneficiario(String nombre, String apellido, String cedula, String genero) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.genero = genero;
         this.cedula = cedula;
-        this.fechaRegistro = fechaRegistro;
-    }
-    public void realizarEleccionDeMenu(Inventario inventario) {
-    }
+        this.genero = genero;
+        this.fechaRegistro = new Date();
 
-
-
-    public String getNombre() {
-        return nombre;
     }
 
-    public String getApellido() {
-        return apellido;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public Fecha getFechaRegistro() {
-        return fechaRegistro;
-    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -46,15 +30,31 @@ public class Beneficiario {
         this.apellido = apellido;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
-    public void setFechaRegistro(Fecha fechaRegistro) {
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public void setFechaRegistro(Date fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    @Override
+    public String toString() {
+        return "Beneficiario" +
+                "\nnombre =  " + nombre +
+                "\napellido =  " + apellido +
+                "\ncedula =  " + cedula +
+                "\ngenero =  " + genero +
+                "\nfechaRegistro =  " + fechaRegistro;
+    }
 }
+
+

@@ -1,4 +1,5 @@
 public enum Producto {
+    DESAYUNO,
     YOGUR,
     PAN,
     FRESAS,
@@ -29,3 +30,4 @@ public enum Producto {
     TORTILLAS,
     CARNE
 }
+
